@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+    
+<head>
+<meta charset="UTF-8">
+    <title>お問い合わせフォーム作成</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+ <h1>お問い合わせフォーム</h1>
+    <form method="post" action="mail_confirm.php">
+        <div>
+        <lavel>名前</lavel><br>
+        <input type="text" name="name" size="35"><br>
+        </div>
+        <div>
+        <lavel>メールアドレス</lavel><br>
+            <input type="text" name="mail" saize="35"></div>
+        <div>
+        <label>年齢</label><br>
+        <select class="dropdown" name="age"><br>
+            <option id="ageA">選択してください</option><br>
+           <script>
+             for (let i=65; i>=18; i--){
+                 document.getElementById("ageA").insertAdjacentHTML("afterend","<option value="+i+">"+i+"歳</option>");
+             }
+           </script>   
+         </select></div>
+         <div>
+         <label>コメント</label><br>
+             <textarea class="coment" name="comments" rows="4" cols="35"></textarea></div>
+         <div>
+             <input type="submit" class="submit" value="送信する"></div>
+    </form>
+
+</body>
+</html>
